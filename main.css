@@ -8,78 +8,123 @@
 html {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(to bottom, #C59124, #FEF350, #C59124);
 }
 
+body {
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+    grid-template-rows: 20% auto 20%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align-last: center;
+}
+
 .proxImg {
-    width: 400px;
-    margin-top: 40px;
-}
-
-.prox {
-    height: 70px;
-    width: 350px;
-    display: inline-block;
-    width: 380px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 70px;
-    letter-spacing: 10px;
-    text-align: center;
-    background-color: #00000090;
-}
-
-.center {
-    display: flex;
-    flex-direction: column;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 16px;
     align-items: center;
     width: 100%;
 }
 
-.center>p {
+.proxImg img {
+    width: 400px;
+}
+
+.proxText {
+    grid-row-start: 2;
     color: #032C45;
     margin: 0;
     font-family: 'Roboto-bold';
-    letter-spacing: 15px;
-    margin-top: 80px;
-    font-size: 40px;
+    letter-spacing: 7px;
+    font-size: 30px;
+    align-self: center;
+    width: 100%;
 }
 
-.center>a,
-.center>a:visited {
+.ruleta {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    width: 100%;
+    align-self: center;
+}
+
+.btn {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    align-self: center;
+}
+
+.btn img {
+    width: 100%;
+}
+
+.apuestas {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.shutter {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.visita {
+    color: #fff;
+    background-color: #EF5B2F;
+    grid-row-start: 3;
+    grid-column-start: 3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visita a,
+.visita a:visited {
+    color: #fff;
     font-family: 'Roboto', sans-serif;
-    letter-spacing: 8px;
-    font-size: 25px;
-    margin-top: 400px;
-    text-align: center;
-    width: 400px;
-    line-height: 60px;
-    color: white;
+    font-size: 30px;
     text-decoration: none;
-    background: linear-gradient(#27899D, #0D3D60);
-    border-radius: 100px;
-    border: 10px solid #FEF350;
 }
 
-@media only screen and (max-width: 1200px) {
-    .center>p {
-        letter-spacing: 30px;
-        font-size: 30px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .center {
-        transform: scale(0.9);
-    }
-    .center>p {
-        letter-spacing: 20px;
-        font-size: 20px;
+@media only screen and (max-width: 980px) {
+    body {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
     }
     .proxImg {
-        width: 200px;
+        margin-top: 16px;
+        align-items: center;
+        width: 100%;
     }
-    .prox {
-        transform: scale(0.9);
+    .proxText {
+        margin-top: 50px;
+    }
+    .ruleta {
+        margin-top: 60px;
+        width: 70%
+    }
+    .btn {
+        margin-top: 50px;
+        width: 50%;
+    }
+    .apuestas {
+        margin-top: 100px;
+        height: 200px;
+        width: 100%;
+    }
+    .shutter {
+        display: none;
     }
 }
